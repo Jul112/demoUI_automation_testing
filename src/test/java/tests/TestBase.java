@@ -22,6 +22,7 @@ public class TestBase {
 
         Configuration.browser = driverConfig.getWebBrowser();
         Configuration.downloadsFolder = "./src/test/resources/privacy_policy";
+        Configuration.reportsFolder = "./src/test/resources/vacancy_screenshot";
 
 
         if(driverConfig.getRemoteWebDriver() != null) {
