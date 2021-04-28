@@ -51,6 +51,14 @@ public class BaseSteps {
         $(".vacancy_content").shouldHave(text(programmingLanguage));
     }
 
+    @Step("Search a vacancy on career page")
+    public void searchSomeVacancy(String jobLevel, String programmingLanguage) {
+        $("[href='https://www.epam-group.ru/careers']").click();
+        Selenide.executeJavaScript("($('.recruiting-search__input').val('qa automation'))");
+        Selenide.executeJavaScript("($('button[type=submit]').click())");
+        $(".search-result ul h5 a").shouldHave(text(jobLevel));
+    }
+
     @Step("Get screenshot")
     public void getScreenshot(String name) {
         String pngVacancy = screenshot(name);

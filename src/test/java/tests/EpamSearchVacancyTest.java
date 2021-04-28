@@ -30,7 +30,6 @@ public class EpamSearchVacancyTest extends TestBase{
     @DisplayName("Search for an incorrect vacancy")
     public void searchForIncorrectVacancyTest() {
         steps.openMainPage();
-        steps.searchVacancy(badJob, programmingLanguage);
-        steps.getScreenshot(screenshotName);
+        steps.searchSomeVacancy(badJob, programmingLanguage);
     }
 }
