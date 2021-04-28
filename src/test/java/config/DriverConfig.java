@@ -2,7 +2,13 @@ package config;
 
 import org.aeonbits.owner.Config;
 
-@Config.Sources("classpath:configurations/driver.properties")
+import static org.aeonbits.owner.Config.LoadType.MERGE;
+
+@Config.LoadPolicy(MERGE)
+@Config.Sources({"system:properties",
+        "classpath:configurations/local_driver.properties",
+        "classpath:configurations/remote_driver.properties"
+})
 public interface DriverConfig extends Config {
 
     @Key("remote.web.driver")

@@ -11,7 +11,7 @@ public class EpamMainPageTest extends TestBase{
     BaseSteps steps = new BaseSteps();
 
     @Test
-    @Tag("web")
+    @Tag("positive")
     @Story("Check slider")
     @DisplayName("Check slider's button on main page")
     public void checkSliderTest() {

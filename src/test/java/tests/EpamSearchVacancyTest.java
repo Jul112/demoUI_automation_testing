@@ -15,7 +15,7 @@ public class EpamSearchVacancyTest extends TestBase{
     String screenshotName = "vacancy";
 
     @Test
-    @Tag("web")
+    @Tag("positive")
     @Story("Vacancies")
     @DisplayName("Search for a suitable vacancy")
     public void searchForVacancyTest() {

@@ -16,7 +16,7 @@ public class EpamSelectLanguageTest extends TestBase{
     SelenideElement greekLang = $("a[lang=gr]");
 
     @Test
-    @Tag("web")
+    @Tag("positive")
     @Story("Select languages")
     @DisplayName("Select language on main page")
     public void selectLanguage() {

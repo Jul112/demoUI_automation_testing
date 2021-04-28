@@ -20,7 +20,7 @@ public class EpamPrivacyPolicyTest extends TestBase{
     String fileName = "Personal_Data_Processing_RU.pdf";
 
     @Test
-    @Tag("web")
+    @Tag("positive")
     @Story("Processing of personal data")
     @DisplayName("Check the download file with the consent to the processing of personal data")
     public void downloadFileWithConsentTest() throws FileNotFoundException {
