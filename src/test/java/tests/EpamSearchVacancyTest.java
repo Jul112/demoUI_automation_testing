@@ -11,17 +11,15 @@ public class EpamSearchVacancyTest extends TestBase{
     BaseSteps steps = new BaseSteps();
     String jobLevelNotForMe = "Senior";
     String badJob = "BadJob";
-    String programmingLanguage = "java";
     String screenshotName = "vacancy";
 
     @Test
     @Tag("positive")
     @Story("Vacancies")
-    @DisplayName("Search for a suitable vacancy")
+    @DisplayName("Search for a suitable vacancy with screenshot")
     public void searchForVacancyTest() {
         steps.openMainPage();
-        steps.searchVacancy(jobLevelNotForMe, programmingLanguage);
-        steps.getScreenshot(screenshotName);
+        steps.searchVacancy(jobLevelNotForMe);
     }
 
     @Test
@@ -30,6 +28,6 @@ public class EpamSearchVacancyTest extends TestBase{
     @DisplayName("Search for an incorrect vacancy")
     public void searchForIncorrectVacancyTest() {
         steps.openMainPage();
-        steps.searchSomeVacancy(badJob, programmingLanguage);
+        steps.searchSomeVacancy(badJob);
     }
 }

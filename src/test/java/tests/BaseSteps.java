@@ -2,13 +2,13 @@ package tests;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.ex.ElementNotFound;
 import io.qameta.allure.Step;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -43,16 +43,19 @@ public class BaseSteps {
     }
 
     @Step("Search suitable vacancy on career page")
-    public void searchVacancy(String jobLevelNotForMe, String programmingLanguage) {
+    public void searchVacancy(String jobLevelNotForMe) {
         $("[href='https://www.epam-group.ru/careers']").click();
         Selenide.executeJavaScript("($('.recruiting-search__input').val('qa automation'))");
         Selenide.executeJavaScript("($('button[type=submit]').click())");
-        $(".search-result ul h5 a").shouldNotHave(text(jobLevelNotForMe)).click();
-        $(".vacancy_content").shouldHave(text(programmingLanguage));
+        SelenideElement element = $(".search-result ul h5 a").shouldNotHave(text(jobLevelNotForMe));
+        if(element.exists()) {
+            element.click();
+            getScreenshot("vacancy_for_me");
+        } else System.out.println("No vacancies for me");
     }
 
     @Step("Search a vacancy on career page")
-    public void searchSomeVacancy(String jobLevel, String programmingLanguage) {
+    public void searchSomeVacancy(String jobLevel) {
         $("[href='https://www.epam-group.ru/careers']").click();
         Selenide.executeJavaScript("($('.recruiting-search__input').val('qa automation'))");
         Selenide.executeJavaScript("($('button[type=submit]').click())");
@@ -61,7 +64,7 @@ public class BaseSteps {
 
     @Step("Get screenshot")
     public void getScreenshot(String name) {
-        String pngVacancy = screenshot(name);
+        Selenide.screenshot(name);
     }
 
     @Step("Select English language")
