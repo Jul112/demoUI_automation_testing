@@ -55,7 +55,8 @@ public class DriverHelper {
                 ImmutableMap.<String, String>builder()
                         .put("Browser", getDriverConfig().getWebBrowser())
                         .put("URL", "http://epam-group.ru")
-                        .build());
+                        .build(), System.getProperty("user.dir")
+                        + "/build/allure-results/");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
