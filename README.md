@@ -1,4 +1,4 @@
-# **Demo UI automation testing for https://www.epam-group.ru**
+# Demo UI automation testing
 
 ## **Tech stack**
 ![Java Logo](src/test/resources/img/stack_icons/Java.png) 
