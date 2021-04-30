@@ -33,7 +33,7 @@ application.
 ### *Details view*
 ![Allure](src/test/resources/img/tests/Allure-suites_example_view.png)
 ### *Video from specific test*
-Test "Change language on main page"
+***Test "Change language on main page"***
 ![Video](src/test/resources/img/tests/Allure-report_video_example.gif)
 ## Telegram notification
 ### Telegram notifications
