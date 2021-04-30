@@ -39,5 +39,5 @@ application.
 ### Telegram notifications
 ![Telegram](src/test/resources/img/tests/telegram_notification_screenshot.png)
 ## Links
-[***Jenkins job***](https://jenkins.autotests.cloud/job/c5-jul112-11-job) 
+[***Jenkins job***](https://jenkins.autotests.cloud/job/c5-jul112-11-job)<br/> 
 [***Jenkins Allure report***](https://jenkins.autotests.cloud/job/c5-jul112-11-job/allure/) 
