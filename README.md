@@ -1,4 +1,4 @@
-# **Demo UI automation testing for https://www.epam-group.ru**
+# **Demo UI automation testing**
 
 ## **Tech stack**
 ![Java Logo](img/stack_icons/Java.png) 
@@ -39,5 +39,5 @@ Test "Change language on the main page"
 ### Telegram notifications
 ![Telegram](img/tests/telegram_notification_screenshot.png)
 ## Links
-[***Jenkins job***](https://jenkins.autotests.cloud/job/c5-jul112-11-job) 
+[***Jenkins job***](https://jenkins.autotests.cloud/job/c5-jul112-11-job) <br>
 [***Jenkins Allure report***](https://jenkins.autotests.cloud/job/c5-jul112-11-job/allure/) 
