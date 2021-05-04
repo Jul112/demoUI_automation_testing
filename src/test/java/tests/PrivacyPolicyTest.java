@@ -1,7 +1,5 @@
 package tests;
 
-import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
@@ -14,7 +12,7 @@ import java.io.FileNotFoundException;
 import static com.codeborne.selenide.Selenide.$;
 
 @Feature("Privacy policy")
-public class EpamPrivacyPolicyTest extends TestBase{
+public class PrivacyPolicyTest extends TestBase{
     BaseSteps steps = new BaseSteps();
     SelenideElement element = $("[href='https://www.epam-group.ru/content/dam/epam/ru/privacy-policy/Personal_Data_Processing_RU.pdf']");
     String fileName = "Personal_Data_Processing_RU.pdf";
@@ -24,7 +22,8 @@ public class EpamPrivacyPolicyTest extends TestBase{
     @Story("Processing of personal data")
     @DisplayName("Check the download file with the consent to the processing of personal data")
     public void downloadFileWithConsentTest() throws FileNotFoundException {
-        steps.openMainPage();
-        steps.downloadFilefromPrivacyPolicyPage(element, fileName);
+        steps.openPrivacyPolicyPage();
+        steps.downloadFileFromPrivacyPolicyPage(element);
+        steps.checkDownloadedFile(fileName);
     }
 }

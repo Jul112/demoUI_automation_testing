@@ -10,10 +10,11 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Selenide.$;
 
 @Feature("Location")
-public class EpamSelectLanguageTest extends TestBase{
+public class SelectLanguageTest extends TestBase{
     BaseSteps steps = new BaseSteps();
     SelenideElement englishLang = $("a[lang=en]");
     SelenideElement greekLang = $("a[lang=gr]");
+    String anotherLanguageText = "Engineering the Future";
 
     @Test
     @Tag("positive")
@@ -22,6 +23,7 @@ public class EpamSelectLanguageTest extends TestBase{
     public void selectLanguage() {
         steps.openMainPage();
         steps.selectLanguage(englishLang);
+        steps.checkChangedLanguage(anotherLanguageText);
     }
 
     @Test

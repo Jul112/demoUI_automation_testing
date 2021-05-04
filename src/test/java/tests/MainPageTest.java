@@ -7,8 +7,9 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 @Feature("Main page")
-public class EpamMainPageTest extends TestBase{
+public class MainPageTest extends TestBase{
     BaseSteps steps = new BaseSteps();
+    String sliderScreenText = "EPAM Continuum";
 
     @Test
     @Tag("positive")
@@ -17,5 +18,6 @@ public class EpamMainPageTest extends TestBase{
     public void checkSliderTest() {
         steps.openMainPage();
         steps.clickSliderButton();
+        steps.checkSliderScreen(sliderScreenText);
     }
 }

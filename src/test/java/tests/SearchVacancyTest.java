@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 @Feature("Career")
-public class EpamSearchVacancyTest extends TestBase{
+public class SearchVacancyTest extends TestBase{
     BaseSteps steps = new BaseSteps();
     String jobLevelNotForMe = "Senior";
     String badJob = "BadJob";
@@ -19,7 +19,8 @@ public class EpamSearchVacancyTest extends TestBase{
     @DisplayName("Search for a suitable vacancy with screenshot")
     public void searchForVacancyTest() {
         steps.openMainPage();
-        steps.searchVacancy(jobLevelNotForMe);
+        steps.searchVacancy();
+        steps.openSuitableVacancy(jobLevelNotForMe);
     }
 
     @Test
@@ -28,6 +29,7 @@ public class EpamSearchVacancyTest extends TestBase{
     @DisplayName("Search for an incorrect vacancy")
     public void searchForIncorrectVacancyTest() {
         steps.openMainPage();
-        steps.searchSomeVacancy(badJob);
+        steps.searchSomeVacancy();
+        steps.checkSearchInvalidVacancy(badJob);
     }
 }
