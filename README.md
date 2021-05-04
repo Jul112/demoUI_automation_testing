@@ -25,7 +25,7 @@ Demo testing UI of specific site
 
 - It built in Jenkins CI. The tests have been executed in Docker containers using Selenoid. 
 - The report generated automatically by Allure framework. It contains scenarios of tests, logs, screenshots and video.
-- The result of build send to telegram with Telegram-notifications 
+- The result of build sent to telegram with Telegram-notifications 
 application.
 ## Allure reports
 ### *Overview of suit*
@@ -33,7 +33,7 @@ application.
 ### *Details view*
 ![Allure](img/tests/Allure-suites_example_view.png)
 ### *Video from specific test*
-Test "Change language on main page"
+Test "Change language on the main page"
 ![Video](img/tests/Allure-report_video_example.gif)
 ## Telegram notification
 ### Telegram notifications
